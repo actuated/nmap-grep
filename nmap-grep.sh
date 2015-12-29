@@ -192,6 +192,10 @@ while read varLine; do
   fi
 done < $varInFile
 
+mv $varOutPath$varTempFile ${varOutPath}unsorted.txt
+cat ${varOutPath}unsorted.txt | sort | uniq > $varOutPath$varTempFile
+rm ${varOutPath}unsorted.txt
+
 # Create summary file
 if [ "$varDoSummary" = "Y" ] && [ -e "$varOutPath$varTempFile" ]; then
   echo "+------------------+--------------+-----------------------------------------------------+" >> ${varOutPath}summary.txt
