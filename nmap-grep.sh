@@ -9,7 +9,7 @@ varTempRandom=$(( ( RANDOM % 9999 ) + 1 ))
 varTempFile="temp-nmp-$varTempRandom.txt"
 if [ -f "$varTempFile" ]; then rm $varTempFile; fi
 varDateCreated="12/28/2015"
-varDateLastMod="12/28/2015"
+varDateLastMod="12/30/2015"
 varDoSummary="Y"
 varDoSplit="Y"
 varRenameSplit="Y"
