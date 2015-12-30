@@ -5,7 +5,7 @@ Comprehensive parsing script for grepable Nmap output files. Provides a summary 
 `nmap-grep.sh` is meant for parsing grepable Nmap output files (-oG). The file must be the first parameter. **--out-file** can be used to specify a custom output directory. If not output directory is given, nmap-grep-YYYY-MM-DD-HH-MM-SS will be created.
 
 ```
-./nmap-grep.sh [inputfilename] [--out-file outputdirectory] [options]
+./nmap-grep.sh [inputfilename] [--out-dir [outputdirectory]] [[options]]
 ```
 
 This script performs the following actions, which each have different options to flag them as disabled.
@@ -18,7 +18,7 @@ This script performs the following actions, which each have different options to
 
 # Example
 ```
-# ./nmap-grep.sh test.txt 
+# ./nmap-grep.sh test.txt --no-up
 
 ============[ nmap-grep.sh - tedr@tracesecurity.com ]============
 
@@ -26,7 +26,6 @@ Input File: test.txt
 Output Path: nmap-grep-2015-12-29-16-33-31/
 
 Functions:
-- Create up-hosts.txt
 - Create summary.txt
 - Create [port]-[tcp/udp]-hosts.txt for each open port
 - Rename split hosts files for common services
@@ -67,7 +66,6 @@ web-urls.txt exists
 1 rdp-hosts.txt
 1 smb-hosts.txt
 2 ssh-hosts.txt
-3 up-hosts.txt
 
 Enter 'y' if you want to display summary.txt before ending... y
 
