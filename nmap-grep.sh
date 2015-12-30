@@ -3,6 +3,7 @@
 # 12/28/2015 by tedr@tracesecurity.com
 # Script for parsing and splitting grepable nmap output files
 # 12/28/2015 - Changed summary output to printf table
+# 12/30/2015 - Changed sort option for summary table to use sort -V
 
 varTempRandom=$(( ( RANDOM % 9999 ) + 1 ))
 varTempFile="temp-nmp-$varTempRandom.txt"
@@ -193,7 +194,7 @@ while read varLine; do
 done < $varInFile
 
 mv $varOutPath$varTempFile ${varOutPath}unsorted.txt
-cat ${varOutPath}unsorted.txt | sort | uniq > $varOutPath$varTempFile
+cat ${varOutPath}unsorted.txt | sort -V | uniq > $varOutPath$varTempFile
 rm ${varOutPath}unsorted.txt
 
 # Create summary file
