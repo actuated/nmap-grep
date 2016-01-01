@@ -1,15 +1,16 @@
 #!/bin/bash
 # nmap-grep.sh
-# 12/28/2015 by tedr@tracesecurity.com
+# 12/28/2015 by by Ted R (http://github.com/actuated)
 # Script for parsing and splitting grepable nmap output files
 # 12/28/2015 - Changed summary output to printf table
 # 12/30/2015 - Changed sort option for summary table to use sort -V
+# 1/1/2016 - Aesthetic change
 
 varTempRandom=$(( ( RANDOM % 9999 ) + 1 ))
 varTempFile="temp-nmp-$varTempRandom.txt"
 if [ -f "$varTempFile" ]; then rm $varTempFile; fi
 varDateCreated="12/28/2015"
-varDateLastMod="12/30/2015"
+varDateLastMod="1/1/2016"
 varDoSummary="Y"
 varDoSplit="Y"
 varRenameSplit="Y"
@@ -26,7 +27,7 @@ varFlagOutExists="N"
 function usage
 {
   echo
-  echo "============[ nmap-grep.sh - tedr@tracesecurity.com ]============"
+  echo "===========[ nmap-grep.sh - Ted R (github: actuated) ]==========="
   echo
   echo "Parse grepable Nmap output files to create (by default):"
   echo "- A summary of hosts and their open ports."
@@ -134,7 +135,7 @@ else
 fi
 
 echo
-echo "============[ nmap-grep.sh - tedr@tracesecurity.com ]============"
+echo "===========[ nmap-grep.sh - Ted R (github: actuated) ]==========="
 echo
 echo "Input File: $varInFile"
 if [ "$varOutPath" != "" ]; then echo "Output Path: $varOutPath"; fi

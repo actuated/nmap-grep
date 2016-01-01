@@ -20,7 +20,7 @@ This script performs the following actions, which each have different options to
 ```
 # ./nmap-grep.sh test.txt --no-up
 
-============[ nmap-grep.sh - tedr@tracesecurity.com ]============
+===========[ nmap-grep.sh - Ted R (github: actuated) ]===========
 
 Input File: test.txt
 Output Path: nmap-grep-2015-12-29-16-33-31/
