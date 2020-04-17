@@ -1,6 +1,9 @@
 # nmap-grep
 Comprehensive parsing script for grepable Nmap output files. Provides a summary table, split hosts files, and URLs for web and SMB hosts.
 
+# Note
+Retired, see https://github.com/actuated/nmaparse for an improved script.
+
 # Usage
 `nmap-grep.sh` is meant for parsing grepable Nmap output files (-oG). The file must be the first parameter. **--out-dir** can be used to specify a custom output directory. If not output directory is given, nmap-grep-YYYY-MM-DD-HH-MM-SS will be created.
 
